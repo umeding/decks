@@ -53,10 +53,22 @@ void onKey2() {
 void onKey3() {
   txOn();
 
+  //  Keyboard.press(KEY_LEFT_ALT);
+  //  Keyboard.press(KEY_LEFT_CTRL);
+  //  Keyboard.press(KEY_DELETE);
+  //  Keyboard.releaseAll();
+
+  // Wiggle the mouse and click to wake up
+  for (int i = 0; i < 5; i++) {
+    delay(30);
+    Mouse.move(100, 0);
+    delay(30);
+    Mouse.move(-100, 0);
+  }
+  Mouse.click();
 
 
-  
-  delay(200);
+  delay(100);
   txOff();
 }
 void onKey4() {
@@ -64,12 +76,14 @@ void onKey4() {
   if (checkReset2nd()) {
     // MS teams: video on/off
     Keyboard.press(KEY_LEFT_SHIFT);
-    Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.press(KEY_LEFT_GUI);     // Mac
+    //Keyboard.press(KEY_LEFT_CTRL);  // Windoze
     Keyboard.print("O");
   } else {
     // MS teams: mute on/off
     Keyboard.press(KEY_LEFT_SHIFT);
-    Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.press(KEY_LEFT_GUI);     // Mac
+    //Keyboard.press(KEY_LEFT_CTRL);  // Windoze
     Keyboard.print("M");
   }
   Keyboard.releaseAll();

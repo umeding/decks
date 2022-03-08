@@ -1,10 +1,12 @@
 /*
    Configurations
+   Board: Arduino Leonardo
 */
 
 #pragma once
 
 #include <Keyboard.h>
+#include <Mouse.h>
 
 #include "Private.h"
 
