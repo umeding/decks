@@ -170,9 +170,11 @@ void areaScreenShot() {
     }
   } else {
     // reply to all
-    Keyboard.press(KEY_LEFT_SHIFT);
-    Keyboard.press(KEY_LEFT_CTRL);
+// Ubuntu 22.04 doesn't use modifiers
+//    Keyboard.press(KEY_LEFT_SHIFT);
+//    Keyboard.press(KEY_LEFT_CTRL);
     Keyboard.press(KEY_PRNT_SCRN);
+  
     Keyboard.releaseAll();
   }
 }
